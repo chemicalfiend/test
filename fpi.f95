@@ -8,11 +8,11 @@ program fpi
 
       integer :: i
       
-      x = 1.15
-      tol = 0.001
+      x = 0.05
+      tol = 0.00001
 
       do i = 1, 10000
-        xn =  x**2 - 4*x + 6
+        xn =  4.307*(10**(-5)) + 5587/(12*10**5 + (0.2303/x**2))
         if (abs((xn-x)/x) .le. tol) then
                 print *, "Solution is ", xn
                 exit
